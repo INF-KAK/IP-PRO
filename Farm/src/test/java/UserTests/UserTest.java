@@ -15,18 +15,18 @@ public class UserTest {
     @Test
     public void shouldCreateUser() throws Exception {
         //act
-        List<Location> locations = Arrays.asList(new Location("Kielce"), new Location("Strawczyn"));
+        List<Field> fields = Arrays.asList(new Field("Kielce"), new Field("Strawczyn"));
         List<User.Role> roles = Collections.singletonList(User.Role.ADMIN);
         User user = User.create("Jan", "Kowalski", "kowalski@gmail.com",
-                "+48999999999", locations, roles);
+                "+48999999999", fields, roles);
 
         //assert
         assertEquals("Jan", user.getName());
         assertEquals("Kowalski", user.getLastName());
         assertEquals("kowalski@gmail.com", user.getEmail());
         assertEquals("+48999999999", user.getPhoneNumber());
-        assertEquals(2, (long) user.getLocations().size());
-        assertEquals(locations, user.getLocations());
+        assertEquals(2, (long) user.getFields().size());
+        assertEquals(fields, user.getFields());
         assertEquals(roles, user.getRoles());
     }
 
