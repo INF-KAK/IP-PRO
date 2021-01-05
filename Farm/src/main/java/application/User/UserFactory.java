@@ -1,8 +1,7 @@
 package application.User;
 
 import application.Administrator.Administrator;
-import application.Event.EventOrganizer;
-import application.Exhibition.Contractor;
+import application.Owner.Owner;
 
 public class UserFactory {
     public User getUser(User user) throws Exception {
