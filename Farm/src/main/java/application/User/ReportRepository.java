@@ -3,5 +3,6 @@ package application.User;
 import java.util.List;
 
 public interface ReportRepository {
-    List<Report> getReports(User user);
+    void sendReport(Report report);
+    List<Report> getReports(User sender, User receiver);
 }

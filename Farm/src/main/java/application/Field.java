@@ -1,18 +1,43 @@
 package application;
 
 public class Field {
+    private int id;
     private String city;
     private String street;
     private int number;
 
-    private Field(String city, String street, int number) {
+
+    public Field(String city, String street, int number) {
         this.city = city.trim();
         this.street = street.trim();
         this.number = number;
     }
 
+    public Field() {
+    }
+
     public Field(String city) {
         this.city = city;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public String getCity() {

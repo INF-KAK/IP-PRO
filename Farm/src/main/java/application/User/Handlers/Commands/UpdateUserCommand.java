@@ -1,4 +1,4 @@
-ackage application.User.Handlers.Commands;
+package application.User.Handlers.Commands;
 
 public class UpdateUserCommand extends UserCommand{
 }

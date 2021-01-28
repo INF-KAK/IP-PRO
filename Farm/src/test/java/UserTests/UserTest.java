@@ -17,13 +17,11 @@ public class UserTest {
         //act
         List<Field> fields = Arrays.asList(new Field("Kielce"), new Field("Strawczyn"));
         List<User.Role> roles = Collections.singletonList(User.Role.ADMIN);
-        User user = User.create("Jan", "Kowalski", "kowalski@gmail.com",
-                "+48999999999", fields, roles);
+        User user = User.create("Jan", "Kowalski", "+48999999999", fields, roles);
 
         //assert
         assertEquals("Jan", user.getName());
         assertEquals("Kowalski", user.getLastName());
-        assertEquals("kowalski@gmail.com", user.getEmail());
         assertEquals("+48999999999", user.getPhoneNumber());
         assertEquals(2, (long) user.getFields().size());
         assertEquals(fields, user.getFields());

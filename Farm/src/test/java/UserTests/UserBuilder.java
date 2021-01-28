@@ -1,5 +1,4 @@
 package UserTests;
-
 import application.Field;
 import application.User.User;
 import application.User.UserFactory;
@@ -11,7 +10,7 @@ public class UserBuilder {
     private String name = "Jan";
     private String lastName = "Kowalski";
     private String phoneNumber = "+48999999999";
-    private List<Location> locations = Collections.emptyList();
+    private List<Field> fields = Collections.emptyList();
     private List<User.Role> roles = Collections.emptyList();
 
     public UserBuilder setName(String name) {
@@ -29,8 +28,8 @@ public class UserBuilder {
         return this;
     }
 
-    public UserBuilder setLocations(List<Location> locations) {
-        this.locations = locations;
+    public UserBuilder setFields(List<Field> fields) {
+        this.fields = fields;
         return this;
     }
 
@@ -40,7 +39,7 @@ public class UserBuilder {
     }
 
     public User build() throws Exception {
-        User user = User.create(name, lastName, phoneNumber, locations, roles);
+        User user = User.create(name, lastName, phoneNumber, fields, roles);
         return new UserFactory().getUser(user);
     }
 }
